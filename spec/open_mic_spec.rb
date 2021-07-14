@@ -30,11 +30,11 @@ RSpec.describe OpenMic do
     it 'does not repeat jokes' do
       user_2.learn(joke_1)
       user_2.learn(joke_2)
-require "pry"; binding.pry
+
       expect(open_mic.repeated_jokes?).to be false
 
       user_1.learn(joke_1)
-require "pry"; binding.pry
+
       expect(open_mic.repeated_jokes?).to be true
     end
   end
