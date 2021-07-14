@@ -1,11 +1,8 @@
 class OpenMic
-  attr_reader :location,
-              :date,
-              :performers
-
-  def initialize(attributes)
-    @location = attributes[:location]
-    @date = attributes[:date]
+  attr_reader :location, :date, :performers
+  def initialize(data)
+    @location = data[:location]
+    @date = data[:date]
     @performers = []
   end
 
@@ -14,9 +11,7 @@ class OpenMic
   end
 
   def repeated_jokes?
-    jokes = @performers.map do |user|
-      user.jokes
-    end.flatten
-    jokes.length != jokes.uniq.length
+    # require "pry"; binding.pry
+    
   end
 end

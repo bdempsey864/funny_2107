@@ -1,7 +1,5 @@
-class User
-  attr_reader :name,
-              :jokes
-
+class User 
+  attr_reader :name, :jokes
   def initialize(name)
     @name = name
     @jokes = []
@@ -16,7 +14,7 @@ class User
   end
 
   def joke_by_id(id)
-    @jokes.find do |joke|
+    @jokes.detect do |joke|
       joke.id == id
     end
   end
