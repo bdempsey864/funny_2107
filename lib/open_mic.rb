@@ -13,7 +13,7 @@ class OpenMic
   def repeated_jokes? # idk.. it makes sense to me, but won't work
     jokes = []
     @performers.each do |performer|
-      jokes. << performer.jokes
+      jokes << performer.jokes
     end
     jokes.count != jokes.uniq.count
   end
